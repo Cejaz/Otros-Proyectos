@@ -1,0 +1,172 @@
+Doctype// Version de html que vayamos a usar
+Head// metadata
+Body// toda la info que queramos poner.
+Head// informacion adicional... Meta data, lenguaje, titulo. Tambien le podemos dar soporte a esta pagina agregando javascript, estilo CSS.
+La etiqueta body es la masa de la pagina
+
+
+La mayoría de los elementos son elementos de nivel de bloque o en línea. ¿Cuál es la diferencia?
+
+Los elementos de nivel de bloque comienzan en una nueva línea, apilando uno encima de la otra, y ocupan cualquier ancho disponible. Los elementos de nivel de bloque pueden estar anidados entre sí y pueden ajustar elementos de nivel en línea. Más comúnmente veremos elementos de nivel de bloque utilizados para piezas más grandes de contenido, como párrafos.
+
+Los elementos de nivel en línea no comienzan en una nueva línea. Caen en el flujo normal de un documento, alineando uno tras otro, y sólo mantienen el ancho de su contenido. Los elementos de nivel en línea pueden anidarse entre sí; sin embargo, no pueden encapsular elementos de nivel de bloque. Por lo general, veremos elementos de nivel en línea con elementos más pequeños de contenido, como unas pocas palabras.
+
+Comentarios en HTML y CSS
+El código anterior incluye signos de exclamación dentro del HTML, y eso está bien. Esos no son elementos, esos son comentarios.
+
+HTML y CSS nos dan la capacidad de dejar comentarios dentro de nuestro código, y cualquier contenido envuelto dentro de un comentario no se mostrará en la página web. Los comentarios ayudan a mantener nuestros archivos organizados, nos permiten establecer recordatorios y proporcionan una manera para que administremos nuestro código de manera más efectiva. Los comentarios se vuelven especialmente útiles cuando hay varias personas trabajando en los mismos archivos.
+
+Los comentarios HTML comienzan con . Los comentarios CSS comienzan con y terminan con .<!-- and end with -->/**/
+
+<header> Vs. Vs. a través de Elements<head><h1><h6>
+Es fácil confundir el elemento con el elemento o los elementos de encabezado, a través de . Todos ellos tienen diferentes significados semánticos y deben ser utilizados de acuerdo con sus significados. Como referencia...<header><head><h1><h6>
+
+El elemento es un elemento estructural que delinea el encabezado de un segmento de una página. Cae dentro del elemento.<header><body>
+
+El elemento no se muestra en una página y se utiliza para esquematear metadatos, incluido el título del documento, y vínculos a archivos externos. Cae directamente dentro del elemento.<head><html>
+
+Los elementos de encabezado, a través de , se utilizan para designar varios niveles de encabezados de texto a lo largo de una página.<h1><h6>
+
+	.<!-- NAVEGACION --> <nav>...</nav>
+     <!-- ARTICULO --> <article>...</article>
+     <!-- SECCION --> <section>...</section>
+
+Decidir entre , , o elementos<article><section><div>
+A veces se hace bastante difícil decidir qué elemento—, , o —es el mejor elemento para el trabajo basado en su significado semántico. El truco aquí, como con cada decisión semántica, es mirar el contenido.<article><section><div>
+
+Tanto el y los elementos contribuyen a la estructura de un documento como ayudan a esbozar un documento. Si el contenido se agrupa únicamente con fines de estilo y no proporciona valor al esquema de un documento, utilice el elemento.<article><section><div>
+
+Si el contenido se agrega al esquema del documento y se puede redistribuir o sindicar de forma independiente, utilice el elemento.<article>
+
+Si el contenido se agrega al esquema del documento y representa un grupo temático de contenido, utilice el elemento.<section>
+
+
+El elemento contiene contenido, como barras laterales, inserciones o explicaciones breves, que está tangencialmente relacionado con el contenido que lo rodea. Cuando se utiliza dentro de un elemento, por ejemplo, el elemento puede identificar contenido relacionado con el autor del artículo.<aside><article><aside>
+
+Podemos pensar instintivamente en un elemento como un elemento que aparece a la izquierda o a la derecha de una página. Sin embargo, debemos recordar que todos los elementos estructurales, incluido el elemento, son elementos de nivel de bloque y, como tal, aparecerán en una nueva línea, ocupando el ancho completo disponible de la página o del elemento en el que están anidados, también conocido como su elemento primario.<aside><aside>
+
+
+Pie
+El elemento identifica el cierre o el final de una página, artículo, sección u otro segmento de una página. Generalmente, el elemento se encuentra en la parte inferior de su elemento primario. El contenido dentro del elemento debe ser información relativa y no debe diferir del documento o sección en la que se incluye.<footer><footer><footer>
+
+<!-- HIPERVINCULO --> <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/">Shay</a>
+
+
+<!-- RUTA RELATIVA -->
+<a href="about.html">About</a>
+
+<!-- RUTA ABSOLUTA -->
+<a href="http://www.google.com/">Google</a>
+
+
+Enlace a una dirección de correo electrónico
+Ocasionalmente es posible que deseemos crear un hipervínculo a nuestra dirección de correo electrónico, por ejemplo, texto de hipervínculo que dice "Email Me", que cuando se hace clic abre el cliente de correo electrónico predeterminado de un usuario y rellena previamente parte de un correo electrónico. Como mínimo, se rellena la dirección de correo electrónico a la que se envía el correo electrónico; otra información, como una línea de asunto y texto del cuerpo, también puede incluirse.
+
+Para crear un vínculo de correo electrónico,el valor del atributo debe comenzar seguido de la dirección de correo electrónico a la que se debe enviar el correo electrónico. Para crear un vínculo de correo electrónico a , por ejemplo, el valor del atributo sería .hrefmailto:shay@awesome.comhrefmailto:shay@awesome.com
+
+Además, el asunto, el texto del cuerpo y otra información para el correo electrónico pueden rellenarse. Para agregar una línea de asunto, incluiremos el parámetro después de la dirección de correo electrónico. El primer parámetro que sigue a la dirección de correo electrónico debe comenzar con un signo de interrogación, , para enlazarlo a la ruta de acceso del hipervínculo. Varias palabras dentro de una línea de asunto requieren que los espacios se codifican mediante .subject=?%20
+
+Agregar texto de cuerpo funciona de la misma manera que agregar el asunto, esta vez utilizando el parámetro en el valor del atributo. Debido a que estamos enlazando un parámetro a otro necesitamos usar la y comercial, , para separar los dos. Al igual que con el asunto, los espacios deben codificarse mediante , y los saltos de línea deben codificarse mediante .body=href&%20%0A
+
+En conjunto, un enlace con el tema de "Llegar hacia fuera" y el texto del cuerpo de "Cómo estás" requeriría un valor de atributo de .shay@awesome.comhrefmailto:shay@awesome.com?subject=Reaching%20Out&body=How%20are%20you
+
+<!-- ABRIR VINCULOS EN UNA VENTANA ADICIONAL --> <a href="http://shayhowe.com/" target="_blank">Shay Howe</a>
+<!-- VINCULACION A PARTES DE LA MISMA PAGINA -->     
+<body id="top">
+  ...
+  <a href="#top">Back to top</a>
+  ...
+</body>
+<!-- LISTAS DESORDENADAS -->
+<ul>
+  <li>Orange</li>
+  <li>Green</li>
+  <li>Blue</li>
+</ul>
+<!-- LISTAS ORDENADAS -->
+<ol>
+  <li>Head north on N Halsted St</li>
+  <li>Turn right on W Diversey Pkwy</li>
+  <li>Turn left on N Orchard St</li>
+</ol>
+<!-- MUESTRA EN QUE NUMERO LA LISTA DEBE COMENZAR -->
+<ol start="30">
+  <li>Head north on N Halsted St</li>
+  <li>Turn right on W Diversey Pkwy</li>
+  <li>Turn left on N Orchard St</li>
+</ol>
+<!-- LISTA INVERTIDA -->
+<ol reversed>
+  <li>Head north on N Halsted St</li>
+  <li>Turn right on W Diversey Pkwy</li>
+  <li>Turn left on N Orchard St</li>
+</ol>
+ <!-- LISTA DE VALOR, CUANDO SE ESCRIBE UN VALUE LAS LISTAS DE AHI PARA ABAJO COMIENZAN A SUBIR DEPENDIENDO DEL NUMERO QUE SE HAYA PUESTO -->
+ <ol>
+  <li>Head north on N Halsted St</li>
+  <li value="9">Turn right on W Diversey Pkwy</li>
+  <li>Turn left on N Orchard St</li>
+</ol>
+<!-- LISTA DE DESCRIPCION -->
+<dl>
+  <dt>study</dt>
+  <dd>The devotion of time and attention to acquiring knowledge on an academic subject, especially by means of books</dd>
+  <dt>design</dt>
+  <dd>A plan or drawing produced to show the look and function or workings of a building, garment, or other object before it is built or made</dd>
+  <dd>Purpose, planning, or intention that exists or is thought to exist behind an action, fact, or material object</dd>
+  <dt>business</dt>
+  <dt>work</dt>
+  <dd>A person's regular occupation, profession, or trade</dd>
+</dl>
+<!-- LISTAS DE ANIDAMIENTO, LISTAS DENTRO DE LISTAS -->
+<ol>
+  <li>Walk the dog</li>
+  <li>Fold laundry</li>
+  <li>
+    Go to the grocery and buy:
+    <ul>
+      <li>Milk</li>
+      <li>Bread</li>
+      <li>Cheese</li>
+    </ul>
+  </li>
+  <li>Mow the lawn</li>
+  <li>Make dinner</li>
+</ol>
+
+Valores de tipo de estilo de lista
+Como se mencionó anteriormente, la propiedad viene con un puñado de diferentes valores. En la lista siguiente se describen estos valores, así como su contenido correspondiente.list-style-type
+
+Valor de tipo de estilo de lista	        Contenido
+none	                                Sin elemento de lista
+disc	                                Un círculo lleno
+circle	                                Un círculo hueco
+square	                                Un cuadrado lleno
+decimal	                                Números decimales
+decimal-leading-zero	                Números decimales acolchados por ceros iniciales
+lower-roman	                            Números romanos en minúsculas
+upper-roman	                            Números romanos en mayúsculas
+lower-greek	                            Griego clásico en minúsculas
+lower-alpha / lower-latin	            Letras ASCII minúsculas
+upper-alpha / upper-latin	            Letras ASCII mayúsculas
+armenian	                            Numeración tradicional armenia
+georgian	                            Numeración tradicional georgiana
+
+
+IMAGENES
+<img src="dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
+TAMAÑO
+img {
+  height: 200px;
+  width: 200px;
+}
+POSICION
+<p>Gatsby is a black, brown, and white hound mix puppy who loves howling at fire trucks and collecting belly rubs. <img src="dog.jpg" alt="A black, brown, and white dog wearing a kerchief"> Although he spends most of his time sleeping he is also quick to chase any birds who enter his vision.</p>
+IMAGENES FLOTANTES
+img {
+  background: #eaeaed;
+  border: 1px solid #9799a7;
+  float: right;
+  margin: 8px 0 0 20px;
+  padding: 4px;
+}
